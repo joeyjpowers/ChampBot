@@ -1,9 +1,9 @@
 # Champ Bot
-Add this Discord bot to your League of Legends Discord server for the complete League of Legends experience. This bot can retrieve a user's match history, info on summoner spells, blurbs about specific champions, and titles of specific champions. Lastly, any time a champion's name is mentioned in any message, one of the champions quotes will be displayed.
+Add this Discord bot to your League of Legends Discord server for the complete League of Legends experience. This bot can retrieve information on a user's most recent match, info on summoner spells, blurbs about specific champions, and titles of specific champions. Lastly, any time a champion's name is mentioned in any message, one of the champions quotes will be displayed.
 
 ## Features
 - Any time a League of Legends champion is mentioned in a message, you'll recieve a quote from that champion.
-- Use "--mh [username]" to retrieve a player's match history.
+- Use "--mh [username]" to retrieve information on the specified player's most recent match.
 - Use "--summoner [spell_name]" to retrieve official information on a summoner spell.
 - Use "--blurb [champion_name]" to retrieve the official bulrb of the specified champion.
 - Use "--title [champion_name]" to retrieve the official title of the specified champion.
