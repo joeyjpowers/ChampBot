@@ -1,1 +1,8 @@
---
+Champ Bot
+Bot that when a League Of Legeneds champion name shows up in a message, it will respond with a quote from that champion.
+
+--mh: displays info about match history
+--summoner: gives info about 
+--blurb: gives blurb about specific champion
+--title: gives title of specific champion
+--quotes: sets quotes on or off

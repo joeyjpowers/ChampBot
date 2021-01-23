@@ -1,12 +1,15 @@
+
+
 import discord
 import os
 from pantheon import pantheon
 import asyncio
 import json
+import config
 
 client = discord.Client()
 server = "na1"
-api_key = 'RGAPI-7112165c-581b-4678-bf1e-35a28bf55f9f'
+
 champJson = json.loads(open('champion.json').read())
 summonerJson = json.loads(open('summoner.json').read())
 
@@ -15,7 +18,7 @@ def requestsLog(url, status, headers):
     print(status)
     print(headers)
 
-panth = pantheon.Pantheon(server, api_key, errorHandling=True, requestsLoggingFunction=requestsLog, debug=True)
+panth = pantheon.Pantheon(server, config.api_key, errorHandling=True, requestsLoggingFunction=requestsLog, debug=True)
 
 champQuotes = True
 
@@ -177,5 +180,11 @@ async def on_message(message):
           await message.channel.send("Quotes are currently turned off")
       else:
         await message.channel.send("\"--quotes on\": Turns champion quotes on\n\"--quotes off\": Turns champion quotes off\n\"--quotes status:\": Check whether champion quotes are turned on or off")
+    
+    if msg.startswith('--help'):
+      await message.channel.send("All Commands\n--mh\n--summoner\n--blurb\n--title\n--quotes")
+
+    if msg.startswith('--image'):
+      await message.channel.send(file=discord.File('IMG_9100_Original.jpeg'))
 
 client.run(os.getenv('TOKEN'))
