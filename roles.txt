@@ -1,0 +1,5 @@
+Jonathan: Match history bot. User types in:
+  "--mh username region"; 
+  bot returns link to their match history, or something saying it doesn't exist
+
+Juan + Joey: Find out how to get which users are online. One of us will work on alerting server when someone gets on, other will work on command for who's online.
