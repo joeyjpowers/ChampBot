@@ -3,7 +3,7 @@ Add this Discord bot to your League of Legends Discord server for the complete L
 
 ## Features
 - Any time a League of Legends champion is mentioned in a message, you'll recieve a quote from that champion.
-- Use "--mh [username]" to retrieve information on the specified player's most recent match.
+- Use "--mrg [username]" to retrieve information on the specified player's most recent match.
 - Use "--summoner [spell_name]" to retrieve official information on a summoner spell.
 - Use "--blurb [champion_name]" to retrieve the official bulrb of the specified champion.
 - Use "--title [champion_name]" to retrieve the official title of the specified champion.
