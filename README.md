@@ -10,7 +10,7 @@ Add this Discord bot to your League of Legends Discord server for the complete L
 - Use "--image [champion_name]" to retrieve an official image of the specified champion.
 - Use "--quotes on" to enable a champion's quote being sent when mentioned in a message.
 - Use "--quote off" to disable a champion's quote being sent when mentioned in a message.
-- Use "--quotes status" to determine whether champion quotes being sent when a champion is mentioned is enabled or diabled.
+- Use "--quote status" to determine whether champion quotes being sent when a champion is mentioned is enabled or diabled.
 - Use "--help" to get a list of commands Champ Bot can handle.
 
 ## Program Purpose
