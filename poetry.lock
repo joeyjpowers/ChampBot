@@ -83,11 +83,30 @@ version = "3.1"
 
 [[package]]
 category = "main"
+description = "Unofficial libraries for interacting with the official League of Legends API"
+name = "leagueoflegends"
+optional = false
+python-versions = "*"
+version = "1.4"
+
+[[package]]
+category = "main"
 description = "multidict implementation"
 name = "multidict"
 optional = false
 python-versions = ">=3.6"
 version = "5.1.0"
+
+[[package]]
+category = "main"
+description = "Riot API library for Python and asyncio"
+name = "pantheon"
+optional = false
+python-versions = "*"
+version = "1.2.1"
+
+[package.dependencies]
+aiohttp = "*"
 
 [[package]]
 category = "main"
@@ -110,7 +129,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [metadata]
-content-hash = "e230b63752d6de7d164e567afa4ed94584fea1f5d25f9d490fbe71b2660df6e1"
+content-hash = "a463c1351560d692fc0ec5b84cd54cb8ef3edbeb7dbe1b51a50e9f2bffd423c9"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -177,6 +196,9 @@ idna = [
     {file = "idna-3.1-py3-none-any.whl", hash = "sha256:5205d03e7bcbb919cc9c19885f9920d622ca52448306f2377daede5cf3faac16"},
     {file = "idna-3.1.tar.gz", hash = "sha256:c5b02147e01ea9920e6b0a3f1f7bb833612d507592c837a6c49552768f4054e1"},
 ]
+leagueoflegends = [
+    {file = "leagueoflegends-1.4.tar.gz", hash = "sha256:b85520ac0a8d43f7ccc4c9f22e1cd70642af1b9cce0b0bdddf58bb103e7e0219"},
+]
 multidict = [
     {file = "multidict-5.1.0-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:b7993704f1a4b204e71debe6095150d43b2ee6150fa4f44d6d966ec356a8d61f"},
     {file = "multidict-5.1.0-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:9dd6e9b1a913d096ac95d0399bd737e00f2af1e1594a787e00f7975778c8b2bf"},
@@ -215,6 +237,10 @@ multidict = [
     {file = "multidict-5.1.0-cp39-cp39-win32.whl", hash = "sha256:fc13a9524bc18b6fb6e0dbec3533ba0496bbed167c56d0aabefd965584557d80"},
     {file = "multidict-5.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:7df80d07818b385f3129180369079bd6934cf70469f99daaebfac89dca288359"},
     {file = "multidict-5.1.0.tar.gz", hash = "sha256:25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5"},
+]
+pantheon = [
+    {file = "pantheon-1.2.1-py3-none-any.whl", hash = "sha256:67f55e7d2f1c06ff300971019365af9968354e10afae87a74cb06a44a7b358d4"},
+    {file = "pantheon-1.2.1.tar.gz", hash = "sha256:1c833b72fdb4ec8a609b26d3cec077bf402e4d38bb8e7a0082a9e66c7015d3ce"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
