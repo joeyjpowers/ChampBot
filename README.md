@@ -14,7 +14,7 @@ Add this Discord bot to your League of Legends Discord server for the complete L
 - Use "--help" to get a list of commands Champ Bot can handle.
 
 ## Program Purpose
-We made this bot so League of Legends fans can have a good time while interacting on their League of Legends Discord servers. It also provides useful information on League of Legends champions and summoner spells, meaning it may just come in handy during gameplay.
+We made this bot so League of Legends fans can have a good time while interacting on their League of Legends Discord servers. It also provides useful information on League of Legends champions and summoner spells, meaning it may just come in handy during gameplay. Lastly, you can stay in the know with your friends League of Legends accomplishments by seeing whether they won or lost as well as their statline.
 
 ## How it was Developed
 We used Python to write the code to make Champ Bot function. We also accessed Riot Games API in order to retrieve League of Legends information.
