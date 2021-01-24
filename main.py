@@ -4,6 +4,7 @@ from pantheon import pantheon
 import asyncio
 import json
 import config
+import random
 
 
 client = discord.Client()
@@ -217,18 +218,33 @@ async def on_message(message):
     #get the blurb of the champion
     if msg.startswith('--blurb'):
       champName = msg[8:]
-      try: 
-        await message.channel.send(champJson['data'][champName.capitalize()]['blurb'])
-      except Exception:
-        await message.channel.send("Enter a League of Legends champion!")
+      if champName != 'random':
+        try: 
+          await message.channel.send(champJson['data'][champName.capitalize()]['blurb'])
+        except Exception:
+          await message.channel.send("Enter a League of Legends champion!")
+      else:
+        champName = champs[random.randrange(0, len(champs) - 1)]
+        try: 
+          await message.channel.send(champJson['data'][champName.capitalize()]['blurb'])
+        except Exception:
+          await message.channel.send("Enter a League of Legends champion!")
+      
 
     #get title of champion
     if msg.startswith('--title'):
       champName = msg[8:]
-      try: 
-        await message.channel.send(champJson['data'][champName.capitalize()]['title'].title())
-      except Exception:
-        await message.channel.send("Enter a League of Legends champion!")
+      if champName != 'random':
+        try: 
+          await message.channel.send(champJson['data'][champName.capitalize()]['title'].title())
+        except Exception:
+          await message.channel.send("Enter a League of Legends champion!")
+      else:
+        champName = champs[random.randrange(0, len(champs) -1)]
+        try: 
+          await message.channel.send(champJson['data'][champName.capitalize()]['title'].title())
+        except Exception:
+          await message.channel.send("Enter a League of Legends champion!")
     
     #summoner spell information
     if msg.startswith('--summoner'):
@@ -305,17 +321,39 @@ async def on_message(message):
     #post image of champion
     if msg.startswith('--image'):
       champName = msg[8:].lower()
-      
-      
-      champName = champName.replace(" ", "")
-      champName = champName.replace("'", "")
-      champName = champName.capitalize()
+      if champName != 'random':
+        champName = champName.replace(" ", "")
+        champName = champName.replace("'", "")
+        champName = champName.capitalize()
+        try:
+          await message.channel.send(file=discord.File("championImages/" + champName + '.png'))
+        except Exception:
+          await message.channel.send("Enter a League of Legends champion")
+
+    if msg.startswith('--forjonathan'):
+      await message.channel.send(file=discord.File('tenor.gif'))
+
+    if msg.startswith('--swag'):
+      await message.channel.send(file=discord.File('Swag.jpg'))
+
+    if msg.startswith('--200years'):
+      await message.channel.send(file=discord.File('championImages/Aphelios.png'))
+
+    if msg.startswith('--cancer'):
+      await message.channel.send(file=discord.File('championImages/teemo.gif'))
+    
+    if msg.startswith('--scouts code'):
+      await message.channel.send("https://www.youtube.com/watch?v=KDIAGsCOWD8")
+
+    if msg.startswith('--image random'):
       try:
+        champName = champs[random.randrange(0, len(champs))]
+        champName = champName.replace(" ", "")
+        champName = champName.replace("'", "")
+        champName = champName.capitalize()
         await message.channel.send(file=discord.File("championImages/" + champName + '.png'))
       except Exception:
         await message.channel.send("Enter a League of Legends champion")
 
-    if msg.startswith('--forjonathan'):
-      await message.channel.send(file=discord.File('tenor.gif'))
 
 client.run(os.getenv('TOKEN'))
