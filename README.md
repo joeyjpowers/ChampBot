@@ -1,5 +1,5 @@
 # Champ Bot
-Add this Discord bot to your League of Legends Discord server for the complete League of Legends experience. This bot can retrieve information on a user's most recent match, info on summoner spells, blurbs about specific champions, and titles of specific champions. Lastly, any time a champion's name is mentioned in any message, one of the champions quotes will be displayed.
+Add this Discord bot to your League of Legends Discord server for the complete League of Legends experience. This bot can retrieve information on a user, info on summoner spells, blurbs about specific champions, and titles of specific champions. Lastly, any time a champion's name is mentioned in any message, one of the champions quotes will be displayed.
 
 ## Features
 - Any time a League of Legends champion is mentioned in a message, you'll recieve a quote from that champion.
