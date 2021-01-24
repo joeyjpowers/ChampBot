@@ -1,4 +1,1 @@
 discord.py
-pantheon.py
-asyncio.py
-json.py
