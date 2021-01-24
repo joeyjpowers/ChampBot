@@ -1,1 +1,5 @@
 discord.py
+os
+pantheon
+asyncio
+json
