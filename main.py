@@ -7,6 +7,7 @@ import config
 import random
 
 
+
 client = discord.Client()
 server = "na1"
 
