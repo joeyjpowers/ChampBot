@@ -1,1 +1,0 @@
-api_key = 'RGAPI-5ab12c2d-5c15-4de2-abbe-f53e5677bbe0'
