@@ -1,2 +1,5 @@
 discord.py
 pantheon
+asyncio
+leagueoflegends
+config.py
