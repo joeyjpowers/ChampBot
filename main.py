@@ -3,6 +3,8 @@ import os
 from pantheon import pantheon
 import asyncio
 import json
+import sys
+sys.path.append('../../')
 import config
 import random
 
