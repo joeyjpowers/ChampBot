@@ -3,12 +3,7 @@ import os
 from pantheon import pantheon
 import asyncio
 import json
-import sys
-sys.path.append('../../')
-from config import settings as CONFIG
 import random
-
-
 
 client = discord.Client()
 server = "na1"
@@ -22,7 +17,7 @@ def requestsLog(url, status, headers):
     print(status)
     print(headers)
 
-panth = pantheon.Pantheon(server, CONFIG.api_key, errorHandling=True, requestsLoggingFunction=requestsLog, debug=True)
+panth = pantheon.Pantheon(server, os.getenv('API_KEY'), errorHandling=True, requestsLoggingFunction=requestsLog, debug=True)
 
 champQuotes = True
 
