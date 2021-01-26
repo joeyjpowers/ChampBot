@@ -5,7 +5,7 @@ import asyncio
 import json
 import sys
 sys.path.append('../../')
-import config
+from config import settings as config
 import random
 
 
