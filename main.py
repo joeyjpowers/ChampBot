@@ -346,7 +346,7 @@ async def on_message(message):
     
     #help menu
     if msg.startswith('--help'):
-      await message.channel.send("All Commands\n--mrg [player_name]: gives information about most recent game from a specified summoner\n--summoner [spell_name]: gives information about a specified summoner spell\n--blurb [champion_name]: gives the official blurb about specified champion\n--title [champion_name]: gives the official title of specified champion\n--quotes [on/off/status]: turns quotes on, off, or gives the status of the quotes\n--image [champion_name]: uploads an image of the specified champion\n--cm [player_name] [champion_name]: shows specified summoner's mastery level and mastery points on specified champion\n--title random, --blurb random, or --image random gives a random title, blurb, or image")
+      await message.channel.send("All Commands\n--mrg [player_name]: gives information about most recent game from a specified summoner\n--summoner [spell_name]: gives information about a specified summoner spell\n--blurb [champion_name]: gives the official blurb about specified champion\n--title [champion_name]: gives the official title of specified champion\n--quotes [on/off/status]: turns quotes on, off, or gives the status of the quotes\n--image [champion_name]: uploads an image of the specified champion\n--cm [player_name] [champion_name]: shows specified summoner's mastery level and mastery points on specified champion\n--title random, --blurb random, or --image random gives a random title, blurb, or image\nThere are some hidden commands, try to find them!\nAll commands start with \"--\"")
 
     #post image of champion
     if msg.startswith('--image'):
