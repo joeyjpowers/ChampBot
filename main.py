@@ -8,9 +8,10 @@ import random
 client = discord.Client()
 server = "na1"
 
-champJson = json.loads(open('champion.json').read())
-summonerJson = json.loads(open('summoner.json').read())
-champsQuotesJson = json.loads(open('champsQuotes.json').read())
+champJson = json.loads(open('jsons/champion.json').read())
+summonerJson = json.loads(open('jsons/summoner.json').read())
+champsQuotesJson = json.loads(open('jsons/champsQuotes.json').read())
+itemJson = json.loads(open('jsons/item.json').read())
 
 def requestsLog(url, status, headers):
     print(url)
@@ -304,6 +305,45 @@ async def on_message(message):
           await message.channel.send("Quotes are currently turned off")
       else:
         await message.channel.send("\"--quotes on\": Turns champion quotes on\n\"--quotes off\": Turns champion quotes off\n\"--quotes status:\": Check whether champion quotes are turned on or off")
+
+    #item
+    if msg.startswith('--item'):
+      itemNamePlainText = msg[7:].title()
+      itemNamePlainText = itemNamePlainText.replace(".", "")
+      itemNamePlainText = itemNamePlainText.replace("'", "")
+      itemNamePlainText = itemNamePlainText.replace(",", "")
+      itemName = itemNamePlainText.lower().split(" ")
+      itemFound = False
+      
+      for itemId in itemJson['data']:
+        item = itemJson['data'][itemId]
+        itemText = item['name'].lower()
+        itemText = itemText.replace(".", "")
+        itemText = itemText.replace("'", "")
+        itemText = itemText.replace(",", "")
+        itemToCheck = itemText.split(" ")
+        
+        if len(itemName) == len(itemToCheck):
+          itemFound = True
+          for i in range(0, len(itemName)):
+            if itemName[i] != itemToCheck[i]:
+              itemFound = False
+              break
+          if itemFound:
+            name = item['name']
+            plaintext = item['plaintext']
+            description = item['description']
+            break
+      if itemFound:
+        await message.channel.send(name + "\n" + plaintext)
+      else:
+        await message.channel.send(itemNamePlainText + " was not found.")
+            
+
+
+            
+
+      
 
     #get champion mastery
     if msg.startswith('--cm'):
