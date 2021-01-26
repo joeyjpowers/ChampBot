@@ -386,4 +386,5 @@ async def on_message(message):
         await message.channel.send("Enter a League of Legends champion")
 
 
-client.run(os.getenv('TOKEN'))
+
+client.run(os.getenv('DISCORD_BOT_TOKEN'))
