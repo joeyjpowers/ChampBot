@@ -117,7 +117,7 @@ async def on_message(message):
                 if not(any(word in msgList[wordIndex: len(msgList)] for word in champs)):
                   champLeft = False
                 if not (containsCM):
-                  await message.channel.send(champ.capitalize() + ": " + quotes[champIndex])
+                  await message.channel.send(champ.title() + ": " + quotes[champIndex])
                 else:
                   containsCM = False
                 if not(champLeft):
@@ -140,8 +140,8 @@ async def on_message(message):
       
         
 
-      #keys: 
-      #['gameId', 'platformId', 'gameCreation', 'gameDuration', 'queueId', 'mapId', 'seasonId', 'gameVersion', 'gameMode', 'gameType', 'teams', 'participants', 'participantIdentities']
+        #keys: 
+        #['gameId', 'platformId', 'gameCreation', 'gameDuration', 'queueId', 'mapId', 'seasonId', 'gameVersion', 'gameMode', 'gameType', 'teams', 'participants', 'participantIdentities']
       
         print("Game ID: " + str(matchListDto[0]['gameId']))
         print("\nPlatform ID: " + str(matchListDto[0]['platformId']))
