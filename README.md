@@ -19,3 +19,6 @@ We made this bot so League of Legends fans can have a good time while interactin
 
 ## How it was Developed
 We used Python to write the code to make Champ Bot function. We also accessed Riot Games API in order to retrieve League of Legends information.
+
+## Demo
+Video Demo on YouTube: https://youtu.be/02FlhZ2nDGA
